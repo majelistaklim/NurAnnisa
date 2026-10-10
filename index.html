@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light" data-fs="1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Majelis Taklim Nur Annisa - Diamond Lake Side, Depok</title>
+  <meta name="description" content="Website resmi Majelis Taklim Nur Annisa, Perumahan Diamond Lake Side, Kota Depok, Jawa Barat. Jadwal pengajian, kajian, kas, dan pendaftaran anggota.">
+  <meta name="theme-color" content="#0E5A38">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Terapkan mode malam & ukuran huruf sebelum halaman tampil (mencegah kedip)
+    (function () {
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('data-fs', localStorage.getItem('fs') || '1');
+    })();
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#view">Langsung ke isi halaman</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="#/beranda" aria-label="Beranda Majelis Taklim Nur Annisa">
+        <img src="assets/logo.jpg" alt="Logo Majelis Taklim Nur Annisa" width="48" height="48">
+        <span class="brand-text">Majelis Taklim Nur Annisa<small>Diamond Lake Side, Depok</small></span>
+      </a>
+      <nav class="top-nav" id="topNav" aria-label="Menu utama"></nav>
+      <div class="header-tools">
+        <button class="tool-btn" id="btnTheme" type="button"></button>
+        <button class="tool-btn" id="btnFont" type="button"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" tabindex="-1">
+    <div class="loading"><div class="spinner"></div>Memuat halaman...</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <img src="assets/logo.jpg" alt="" width="72" height="72">
+      <strong id="footName">Majelis Taklim Nur Annisa</strong>
+      <div id="footAddr">Perumahan Diamond Lake Side, Kota Depok, Jawa Barat</div>
+      <small>&copy; <span id="year"></span> Majelis Taklim Nur Annisa &middot; <a href="admin.html">Admin</a></small>
+    </div>
+  </footer>
+
+  <nav class="bottom-nav" id="bottomNav" aria-label="Menu utama (HP)"></nav>
+
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" hidden aria-label="Chat admin lewat WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.95L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 14.97l-.3-.2-3.1.9.9-3-.2-.3A8.1 8.1 0 0 1 12.04 3.8zM8.6 7.5c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5 0 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.5-.4-.5-.6-.5z"/></svg>
+    <span>Chat Admin</span>
+  </a>
+
+  <dialog class="lightbox" id="lightbox">
+    <img id="lbImg" alt="">
+    <p id="lbCap"></p>
+    <button class="btn btn-gold" id="lbClose" type="button">Tutup</button>
+  </dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
